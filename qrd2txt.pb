@@ -27,7 +27,7 @@ Procedure ConvertFile(QRDPath$)
 	EndIf
 	If Not DatabaseQuery(DB, "SELECT value FROM shelf WHERE key='raw.text'")
 		CloseDatabase(DB)
-		MessageRequester("Error", "Failed to query " + QRDPath$, #PB_MessageRequester_Error
+		MessageRequester("Error", "Failed to query " + QRDPath$, #PB_MessageRequester_Error)
 		ProcedureReturn 0
 	EndIf
 	If NextDatabaseRow(DB)
